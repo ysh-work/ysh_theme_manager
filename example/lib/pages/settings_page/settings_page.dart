@@ -23,11 +23,12 @@ class SettingsPage extends StatelessWidget {
             _separator,
             const SettingsLabel('Theme Mode'),
             Padding(
-              padding: const EdgeInsetsDirectional.only(start: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Row(
                 children: const [
-                  ThemeModeMenuButton(),
-                  UseMaterial3ToggleWidget(),
+                  Expanded(child: ThemeModeMenuButton()),
+                  SizedBox(width: 32),
+                  Expanded(child: UseMaterial3ToggleWidget()),
                 ],
               ),
             ),

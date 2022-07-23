@@ -9,9 +9,10 @@ class UseMaterial3ToggleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(
+    return SwitchListTile(
       value:
           context.watch<ThemeManager<ThemeConfig>>().state.config.useMaterial3,
+      title: const Text('Material 3'),
       onChanged: (value) {
         context.read<ThemeManager<ThemeConfig>>().updateUseMaterial3(value);
       },
